@@ -31,3 +31,13 @@ export const mockEnderecoInvalidoDto = new CriarEnderecoDto(
   'São Paulo',
   'Brasil',
 );
+
+
+export const enderecoEntidade = {
+  cep: '12345678',
+  logradouro: 'Rua Teste',
+  numero: '123',
+  bairro: 'Bairro Teste',
+  cidade: 'Cidade Teste',
+  estado: 'SP'
+}as unknown as Endereco;

@@ -15,8 +15,9 @@ export class PontuacaoTypeOrmRepository extends PontuacaoRepository {
     return await this.pontuacaoRepository.save(ponto);
   }
 
-  async atualizar(id: string, ponto: Pontuacao): Promise<UpdateResult> {
-    return await this.pontuacaoRepository.update(id, ponto);
+  async atualizar(id: string, ponto: Pontuacao): Promise<Pontuacao> {
+    await this.pontuacaoRepository.update(id, ponto);
+    return await this.buscarPontuacao(id);
   }
 
   async buscarPontuacao(id: string): Promise<Pontuacao> {
